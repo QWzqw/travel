@@ -22,10 +22,10 @@ export default {
       },
       swiperList: [ {
         id: '0001',
-        imgUrl: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/eff4eb8be47786f9541b3666e240f2cc.jpg'
+        imgUrl: 'https://s.qunarzz.com/m_bus_search/images/banner_defaut.png'
       }, {
         id: '0002',
-        imgUrl: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/aad9b1b0ddf1a6432a54e2283cb4f3ca.jpg'
+        imgUrl: 'http://dimg04.c-ctrip.com/images/700h0i0000009nvq206D5_750_330_217.jpg'
       }
       ]
     }
@@ -39,7 +39,7 @@ export default {
   overflow : hidden
   width :100%
   height :0
-  padding-bottom :51%
+  padding-bottom :42%
   .swiper-img
     width:100%
     background-color:#eee
