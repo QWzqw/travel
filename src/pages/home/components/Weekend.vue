@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <div class="item-img-wrraper">
           <img class="item" :src="item.imgUrl" alt="">
         </div>
@@ -17,26 +17,8 @@
 <script>
 export default {
   name: 'HomeWeenkend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1503/4a/4a2ba4bfc1d8d25b.water.jpg_600x330_556f5a2c.jpg',
-        title: '珠海海泉湾神秘岛',
-        desc: '具有个性魅力的主题乐园'
-      }, {
-        id: '0002',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1604/b8/b8e41237b32404d590.img.jpg_600x330_c6059da4.jpg',
-        title: '珠海海泉湾神秘岛',
-        desc: '具有个性魅力的主题乐园'
-      }, {
-        id: '0003',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1803/7e/7ef7350aa26bb843a3.water.jpg_600x330_3fb7cbe9.jpg',
-        title: '澳门环岛游',
-        desc: '“浪漫之城”珠海的美丽景色一览无余'
-      }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -46,8 +28,7 @@ export default {
     line-height: .8rem
     background-color: #eeeeee
     text-indent: .2rem
-    margin-top:.2rem
-  .item-img-wrraper 
+  .item-img-wrraper
     overflow: hidden
     height : 0;
     padding-bottom :40%

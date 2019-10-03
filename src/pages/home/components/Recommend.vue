@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
           <img class="item" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -16,26 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1907/90/903428cd6de6a2c1a3.img.jpg_200x200_72b53792.jpg',
-        title: '岭南印象园',
-        desc: '奔跑吧兄弟取景地'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1907/90/903428cd6de6a2c1a3.img.jpg_200x200_72b53792.jpg',
-        title: '岭南印象园',
-        desc: '奔跑吧兄弟取景地'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1907/90/903428cd6de6a2c1a3.img.jpg_200x200_72b53792.jpg',
-        title: '岭南印象园',
-        desc: '奔跑吧兄弟取景地'
-      }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

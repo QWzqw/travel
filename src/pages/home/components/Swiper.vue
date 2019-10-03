@@ -1,8 +1,8 @@
 <template>
   <div class="wrraper">
-      <swiper :options="swiperOption" >
+      <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
       </swiper-slide>
       <!-- Optional controls -->
@@ -13,21 +13,21 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         autoplay: 3000,
         loop: true
-      },
-      swiperList: [ {
-        id: '0001',
-        imgUrl: 'https://s.qunarzz.com/m_bus_search/images/banner_defaut.png'
-      }, {
-        id: '0002',
-        imgUrl: 'http://dimg04.c-ctrip.com/images/700h0i0000009nvq206D5_750_330_217.jpg'
       }
-      ]
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }
@@ -39,7 +39,7 @@ export default {
   overflow : hidden
   width :100%
   height :0
-  padding-bottom :42%
+  padding-bottom :32%
   .swiper-img
     width:100%
     background-color:#eee
